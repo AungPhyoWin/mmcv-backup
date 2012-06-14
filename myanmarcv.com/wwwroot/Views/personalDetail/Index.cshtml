@@ -1,0 +1,123 @@
+﻿@model IEnumerable<MyanmarCV.Models.personalDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            email
+        </th>
+        <th>
+            nationalityId
+        </th>
+        <th>
+            passportNo
+        </th>
+        <th>
+            nricNo
+        </th>
+        <th>
+            mobileNo
+        </th>
+        <th>
+            homePhoneNo
+        </th>
+        <th>
+            contactableNo
+        </th>
+        <th>
+            genderId
+        </th>
+        <th>
+            createdDate
+        </th>
+        <th>
+            deletedDate
+        </th>
+        <th>
+            modifiedDate
+        </th>
+        <th>
+            dateOfBirth
+        </th>
+        <th>
+            countryOfResidenceId
+        </th>
+        <th>
+            religionId
+        </th>
+        <th>
+            martialStatusId
+        </th>
+        <th>
+            race
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nationalityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passportNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nricNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobileNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homePhoneNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactableNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genderId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deletedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.countryOfResidenceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.religionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.martialStatusId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.race)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

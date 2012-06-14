@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "InsertCSV";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<h2>Insert CSV</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("InsertCSV","Admin",FormMethod.Post))
+{
+  
+ <div class="banner_first">
+
+		<div class="banner_con">
+
+        		<div class="logo_left"><img src="../../images/flogo.jpg" /></div>
+
+                <div class="signin">
+
+                	<table width="412px" border="0" cellspacing="0" cellpadding="0">
+
+                      <tr>
+                        <td height="20px">File Name</td>
+
+                        <td>Password</td>
+
+                        <td></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td width="153"><input type="text" name="fileName" class="singin_textbox" style="border:0"/></td>
+
+                        <td width="153"><input type="password" name="Password" class="singin_textbox" style="border:0"/></td>
+
+                        <td align="left"><input type="submit" value="Login" class="signin_btn"/></td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+
+                        <td><a href="../Account/forgetPassword" class="forgot">Forgot your password?</a></td>
+
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+
+                      </tr>
+
+                    </table>
+
+                </div>
+
+        </div>
+
+</div>
+}
+

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "test";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<script type="text/javascript">
+    function popUpClosed() {
+        window.location.reload();
+    }
+
+    function myPopup() {
+        window.open("http://localhost:52524/Account/test3")
+    }
+</script>
+<input type="button" onClick="myPopup()" value="POP!">

@@ -1,0 +1,35 @@
+﻿@model MyanmarCV.Models.mmCV
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>mmCV</legend>
+
+    <div class="display-label">email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">firstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.firstName)
+    </div>
+
+    <div class="display-label">lastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lastName)
+    </div>
+
+    <div class="display-label">desiredUserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.desiredUserName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

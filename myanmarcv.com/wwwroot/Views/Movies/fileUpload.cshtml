@@ -1,0 +1,12 @@
+﻿@model MyanmarCV.Models.Movie
+
+@{
+    ViewBag.Title = "fileUpload";
+}
+
+<h2>fileUpload</h2>
+@using (Html.BeginForm("fileUpload", "Movies", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    <input type="file" name="file" id="file" />
+    <input type="submit" value="OK" />
+}

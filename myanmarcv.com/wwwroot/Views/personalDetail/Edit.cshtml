@@ -1,0 +1,156 @@
+﻿@model MyanmarCV.Models.personalDetail
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>personalDetail</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Model.email
+            
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nationalityId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nationalityId)
+            @Html.ValidationMessageFor(model => model.nationalityId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.passportNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.passportNo)
+            @Html.ValidationMessageFor(model => model.passportNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nricNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nricNo)
+            @Html.ValidationMessageFor(model => model.nricNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mobileNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mobileNo)
+            @Html.ValidationMessageFor(model => model.mobileNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.homePhoneNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.homePhoneNo)
+            @Html.ValidationMessageFor(model => model.homePhoneNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.contactableNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.contactableNo)
+            @Html.ValidationMessageFor(model => model.contactableNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.genderId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.genderId)
+            @Html.ValidationMessageFor(model => model.genderId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.createdDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.createdDate)
+            @Html.ValidationMessageFor(model => model.createdDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.deletedDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.deletedDate)
+            @Html.ValidationMessageFor(model => model.deletedDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.modifiedDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.modifiedDate)
+            @Html.ValidationMessageFor(model => model.modifiedDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dateOfBirth)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dateOfBirth)
+            @Html.ValidationMessageFor(model => model.dateOfBirth)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.countryOfResidenceId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.countryOfResidenceId)
+            @Html.ValidationMessageFor(model => model.countryOfResidenceId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.religionId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.religionId)
+            @Html.ValidationMessageFor(model => model.religionId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.martialStatusId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.martialStatusId)
+            @Html.ValidationMessageFor(model => model.martialStatusId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.race)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.race)
+            @Html.ValidationMessageFor(model => model.race)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

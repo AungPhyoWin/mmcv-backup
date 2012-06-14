@@ -1,0 +1,331 @@
+/***** Begin Pink Theme ******/
+
+/* One container to bind them... */
+.dk_theme_pink {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-bottom: 18px;
+  text-align:left;
+}
+  .dk_theme_pink:focus {
+    outline: 0;
+  }
+  .dk_theme_pink a {
+    cursor: pointer;
+  	color:#333;    
+    text-decoration: none;
+  }
+  .dk_theme_pink a:hover {
+    text-decoration: none;
+  }  
+
+/* Opens the dropdown and holds the menu label */
+.dk_theme_pink .dk_toggle {
+  /**
+   * Help: Arrow image not appearing
+   * Try updating this property to your correct dk_arrows.png path
+   */
+  background: url('../images/dk_sprite.png') no-repeat right -45px;
+  color: #333;
+  text-shadow: #fff 1px 1px 0;
+  height:42px;
+  padding-right:31px;
+}
+  .dk_theme_pink .dk_toggle:hover {
+    border-color: #8c8c8c;
+  }
+  
+  .dk_theme_pink .dk_toggle .dk_label {
+  	display:block;
+    background: url('../images/dk_sprite.png') no-repeat 0 0;
+    height:42px;
+    line-height:32px;
+    padding-left:10px;
+  }
+  
+  /* Applied when the dropdown is focused */
+  .dk_theme_pink.dk_focus .dk_toggle {
+  }
+
+/* Applied whenever the dropdown is open */
+.dk_theme_pink.dk_open {
+  /**
+   * Help: Dropdown menu is covered by something
+   * Try setting this value higher
+   */
+  z-index: 10;
+}
+  .dk_theme_pink .dk_open .dk_toggle {
+    color: #ccc;
+  }
+
+/* The outer container of the options */
+.dk_theme_pink .dk_options {
+   background: transparent url('../images/dk_sprite.png') no-repeat 0 bottom;
+   padding-bottom:20px;
+   padding-top:5px;   
+   margin-top:-10px;
+}
+
+	.dk_theme_pink .dk_options ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+	}
+
+  .dk_theme_pink .dk_options li {
+    border-top: 1px solid #ccc;  
+    margin:0;
+  }
+
+  .dk_theme_pink .dk_options a {
+    border-top: 1px solid #fff;
+    font-weight: bold;
+    padding: 8px 10px;
+  }
+  .dk_theme_pink .dk_options li:last-child a {
+    border-bottom: none;
+  }
+  .dk_theme_pink .dk_options a:hover,
+  .dk_theme_pink .dk_option_current a {
+    background-color: #e958bb;
+    border-top: 1px solid #e958bb;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: rgba(0, 0, 0, .5) 0 1px 0;
+  }
+
+/* Inner container for options, this is what makes the scrollbar possible. */
+.dk_theme_pink .dk_options_inner {
+  color: #333;
+  max-height: 250px;
+  text-shadow: #fff 0 1px 0;
+}
+
+/* Set a max-height on the options inner */
+.dk_theme_pink .dk_options_inner,
+.dk_theme_pink .dk_touch .dk_options {
+  max-height: 250px;
+}
+
+/******  End Pink Theme ******/
+
+
+
+/***** Begin Blue Theme ******/
+.dk_theme_blue {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-bottom: 18px;
+  text-align:left;  
+}
+  .dk_theme_blue:focus {
+    outline: 0;
+  }
+  .dk_theme_blue a {
+    cursor: pointer;
+  	color:#333;    
+    text-decoration: none;
+  }
+  .dk_theme_blue a:hover {
+    text-decoration: none;
+  }  
+
+/* Opens the dropdown and holds the menu label */
+.dk_theme_blue .dk_toggle {
+  /**
+   * Help: Arrow image not appearing
+   * Try updating this property to your correct dk_arrows.png path
+   */
+  background: url('../images/dk_sprite_demo.png') no-repeat right -32px;
+  color: #333;
+  text-shadow: #fff 1px 1px 0;
+  height:30px;
+  padding-right:23px;
+}
+  .dk_theme_blue .dk_toggle:hover {
+    border-color: #8c8c8c;
+  }
+  
+  .dk_theme_blue .dk_toggle .dk_label {
+  	display:block;
+    background: url('../images/dk_sprite_demo.png') no-repeat 0 0;
+    height:30px;
+    line-height:28px;
+    padding-left:10px;
+  }
+  
+  /* Applied when the dropdown is focused */
+  .dk_theme_blue .dk_focus .dk_toggle {
+  }
+
+/* Applied whenever the dropdown is open */
+.dk_theme_blue.dk_open {
+  z-index: 10;
+}
+  .dk_theme_blue.dk_open .dk_toggle {
+    color: #ccc;
+  }
+
+/* The outer container of the options */
+.dk_theme_blue .dk_options {
+   background: #efefef;
+  
+}
+
+	.dk_theme_blue .dk_options ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+   border:1px solid #ddd; 	
+	}
+
+  .dk_theme_blue .dk_options li {
+    border-top: 1px solid #ccc;  
+    margin:0;    
+  }
+
+  .dk_theme_blue .dk_options a {
+    border-top: 1px solid #fff;
+    font-weight: bold;
+    padding: 8px 10px;
+  }
+  .dk_theme_blue .dk_options li:last-child a {
+    border-bottom: none;
+  }
+  .dk_theme_blue .dk_options a:hover,
+  .dk_theme_blue .dk_option_current a {
+    background-color: #77b1d7;
+    border-top: 1px solid #77b1d7;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: rgba(0, 0, 0, .5) 0 1px 0;
+  }
+
+/* Inner container for options, this is what makes the scrollbar possible. */
+.dk_theme_blue .dk_options_inner {
+  color: #333;
+  max-height: 250px;
+  text-shadow: #fff 0 1px 0;
+}
+
+/* Set a max-height on the options inner */
+.dk_theme_blue .dk_options_inner,
+.dk_theme_blue .dk_touch .dk_options {
+  max-height: 250px;
+}
+
+/***** End Blue Theme ******/
+
+
+/***** Begin Green Theme ******/
+.dk_theme_green {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-bottom: 18px;
+  text-align:left;  
+}
+  .dk_theme_green:focus {
+    outline: 0;
+  }
+  .dk_theme_green a {
+    cursor: pointer;
+  	color:#333;    
+    text-decoration: none;
+  }
+  .dk_theme_green a:hover {
+    text-decoration: none;
+  }  
+
+/* Opens the dropdown and holds the menu label */
+.dk_theme_green .dk_toggle {
+  /**
+   * Help: Arrow image not appearing
+   * Try updating this property to your correct dk_arrows.png path
+   */
+  background: url('../images/dk_sprite_demo.png') no-repeat right -97px;
+  color: #333;
+  text-shadow: #fff 1px 1px 0;
+  height:31px;
+  padding-right:23px;
+}
+  .dk_theme_green .dk_toggle:hover {
+    border-color: #8c8c8c;
+  }
+  
+  .dk_theme_green .dk_toggle .dk_label {
+  	display:block;
+    background: url('../images/dk_sprite_demo.png') no-repeat 0 -65px;
+    height:31px;
+    line-height:28px;
+    padding-left:10px;
+  }
+  
+  /* Applied when the dropdown is focused */
+  .dk_theme_green .dk_focus .dk_toggle {
+  }
+
+/* Applied whenever the dropdown is open */
+.dk_theme_green.dk_open {
+  z-index: 10;
+}
+  .dk_theme_green.dk_open .dk_toggle {
+    color: #ccc;
+  }
+
+/* The outer container of the options */
+.dk_theme_green .dk_options {
+   background: #efefef;
+  margin-top:3px;
+}
+
+	.dk_theme_green .dk_options ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+   border:1px solid #ddd; 	
+   border-radius:3px;
+     -moz-border-radius:3px;
+   	-webkit-border-radius:3px;      
+	}
+
+  .dk_theme_green .dk_options li {
+    border-top: 1px solid #ccc;  
+    margin:0;    
+  }
+
+  .dk_theme_green .dk_options a {
+    border-top: 1px solid #fff;
+    font-weight: bold;
+    padding: 8px 10px;
+  }
+  .dk_theme_green .dk_options li:last-child a {
+    border-bottom: none;
+  }
+  .dk_theme_green .dk_options a:hover,
+  .dk_theme_green .dk_option_current a {
+    background-color: #e9e9e9;
+    border-top:1px solid #e9e9e9;
+    color: #75a150;
+    text-decoration: none;
+    text-shadow: rgba(200, 200, 200, .5) 0 1px 0;
+  }
+
+/* Inner container for options, this is what makes the scrollbar possible. */
+.dk_theme_green .dk_options_inner {
+  color: #333;
+  max-height: 250px;
+  text-shadow: #fff 0 1px 0;
+}
+
+/* Set a max-height on the options inner */
+.dk_theme_green .dk_options_inner,
+.dk_theme_green .dk_touch .dk_options {
+  max-height: 250px;
+}

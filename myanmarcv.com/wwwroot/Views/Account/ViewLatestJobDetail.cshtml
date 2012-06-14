@@ -1,0 +1,76 @@
+@model MyanmarCV.Models.jobAdvertisment
+
+@{
+    ViewBag.Title = "ViewLastestJobDetail";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+<body id="brjob_link">
+ <div style="width:900px; margin:0 auto;display:table;">
+                        		<div style="width:850px; margin:0px 15px 7px 8px;  margin:0 auto;">
+                                    <br />
+                                    		<table border="0" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td style="background:url('../../images/main_left.jpg') no-repeat; height:35px; width:11px;"></td>
+                                                    <td style="font-family: Calist;font-size:18px;background:url('../../images/main_body.jpg') repeat-x;height:35px;width:850px; text-align:left; ">View Latest Job Details</td>
+                                                    <td style="background:url('../../images/main_right.jpg') no-repeat; height:35px;width:11px;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                  	<td colspan="3" style="border-left:1px solid #dad8d9; border-right:1px solid #dad8d9;">
+                                                 	        
+                                                            <div class="jobdetail_head">
+                                                               <span style="font-weight:bold">Job Position:</span></b>  <span style="padding-left:80px;font-weight:bold">
+                                                                <u>@Html.DisplayFor(model => model.jobPosition)</u></span><br />
+                                                                <span style="font-weight:bold">Job Description:</span>
+                                                                <span style="color:#2b2d2d; font-size:12px; font-style:normal; padding-left:60px">
+                                                                  @Html.DisplayFor(model => model.jobDescription)</span><br /><br />
+                                                                  <div style="background-color:#eef1f6; font-size:12px; padding:10px; color:#292b2b">
+                                                                       <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tr>
+                                                                                <td width="200px"> Experience Required:</td>
+                                                                                <td>@Html.DisplayFor(model => model.yearOfExperienceRequired) years</td>
+                                                                           </tr>
+                                                                             <tr>
+                                                                                <td>Posted Date:</td>
+                                                                                <td>@Html.DisplayFor(model => model.modifiedDate)</td>
+                                                                           </tr>
+                                                                             <tr>
+                                                                                <td>Job Type:</td>
+                                                                                <td>@Html.DisplayFor(model => model.jobTypeId)</td>
+                                                                           </tr>
+                                                                             <tr>
+                                                                                <td>Emplyoee Required:</td>
+                                                                                <td>@Html.DisplayFor(model => model.noOfemployeeRequired)</td>
+                                                                           </tr>
+                                                                             <tr>
+                                                                                <td>View Count:</td>
+                                                                                <td>@Html.DisplayFor(model => model.viewCount)</td>
+                                                                           </tr>
+                                                                             <tr>
+                                                                                <td> Contact Email:</td>
+                                                                                <td> @Html.DisplayFor(model => model.contactEmail)</td>
+                                                                           </tr>
+                                                                             <tr>
+                                                                                <td>Close Date:</td>
+                                                                                <td>@Html.DisplayFor(model => model.closeDate)</td>
+                                                                           </tr>
+                                                                       </table>
+                                                                    
+                                                                  </div>
+                                                                  
+                                                                    <p>
+                                                                        <a href="@Url.Content("~/Account/ViewLatestJob/0?jobTypeId=")@ViewBag.jobTypeId"><img src="../../images/back_btn.jpg" style="padding:10px" /></a>
+                                                                    </p>
+                                                            </div>
+                                                            	
+                                                    </td>
+                                                 </tr>
+                                                 <tr>
+                                                 	<td style="background-image:url('../../images/main_bot_left.jpg'); height:9px; background-repeat:no-repeat;"></td>
+                                                    <td style="border-bottom:1px solid #dad8d9;"></td>
+                                                    <td style="background-image:url('../../images/main_bot_right.jpg');height:9px; background-repeat:no-repeat;"></td>
+                                                 </tr>
+                                                </table>
+                                 
+                                </div>
+      </div> 
+</body>

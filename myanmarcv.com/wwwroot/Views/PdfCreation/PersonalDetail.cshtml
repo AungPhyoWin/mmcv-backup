@@ -1,0 +1,306 @@
+@model MyanmarCV.Models.pdfCreation
+
+@{
+    ViewBag.Title = "PersonalDetail";
+    Layout = "~/Views/Shared/_pdfLayout.cshtml";
+}
+   <div style="padding:0px 0px 0px 0px; height:950px;">
+    <table cellpadding="0" cellspacing="5px" border="0" style=" background-color:#ffffff; width:650px;" class="pdfText">
+       <tr>
+            <td align="center" colspan="2" style="color:#cccccc;">
+            <br />
+            Resume of  @Html.DisplayFor(model => model.name)
+            <br />
+            <br />
+            <br />
+            </td>
+       </tr>
+       <tr>
+        <td>
+           <div style="line-height:25px;">
+            <strong>@Html.DisplayFor(model => model.name)</strong><br />
+                 @Html.DisplayFor(model => model.address)<br />
+                 @Html.DisplayFor(model => model.city), Myanmar<br />
+                 Email : @Html.DisplayFor(model => model.email)
+            </div>
+        </td>
+        <td align="right">
+            <img src="../../images/apw.jpg" border="0" width="110" />
+        </td>
+    </tr>
+    </table>
+    <table cellpadding="0" cellspacing="5px" border="0" style=" background-color:#ffffff; width:650px;" class="pdfText2">
+    <tr>
+        <td colspan="2">
+            <div style="background-color:#ededed; color:#454343; font-family:Arial; font-weight:bold; height:20px; width:650px; text-align:left; padding-left:5px; padding-top:5px;">
+                RESUME SUMMARY
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="pdfLabelColumn">
+            <div style="color:#696868">Latest Position</div>
+        </td>
+        <td align="left">
+            <div>
+                @Html.DisplayFor(model => model.latestPosition)
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <div style="color:#696868">Highest Education Attained</div>
+        </td>
+        <td>
+            <div>
+                @Html.DisplayFor(model => model.highestEducationLevel)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <div style="color:#696868">Field of Study</div>
+        </td>
+        <td>
+             <div >
+                @Html.DisplayFor(model => model.fieldOfStudy)
+            </div>
+        </td>
+      </tr>
+     <tr>
+        <td>
+             <div style="color:#696868">Expected Salary</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.expectedSalary)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <div style="color:#696868">Availability</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.availability)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td colspan="2">
+             <div style="background-color:#ededed; color:#454343; font-family:Arial; font-weight:bold; height:20px; width:650px; text-align:left; padding-left:5px; padding-top:5px;">
+                PERSONAL PARTICULARS
+                </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+             <div style="color:#696868">Name</div>
+        </td>
+        <td>
+              <div >
+                 @Html.DisplayFor(model => model.name)
+              </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           <div style="color:#696868">Gender</div>
+        </td>
+        <td>
+             <div >
+                @Html.DisplayFor(model => model.gender)
+             </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           <div style="color:#696868">Date Of Birth</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.dateOfBirth)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <div style="color:#696868">Nationality</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.nationality)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+             <div style="color:#696868">Race</div>
+        </td>
+        <td>
+             <div >
+                @Html.DisplayFor(model => model.race)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            <div style="color:#696868">Marital Status</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.maritalStatus)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+             <div style="color:#696868">NRIC No</div>
+        </td>
+        <td>
+             <div >
+                @Html.DisplayFor(model => model.nricNo)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+             <div style="color:#696868">Passport No</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.passportNo)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+           <div style="color:#696868">Mobile No</div>
+        </td>
+        <td>
+             <div >
+             @Html.DisplayFor(model => model.mobileNo)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+              <div style="color:#696868">Home Phone No</div>
+    
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.homePhoneNo)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+             <div style="color:#696868">Any Contactable No</div>
+        </td>
+        <td>
+            <div >
+                @Html.DisplayFor(model => model.contactableNo)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td colspan="2">
+            <div style="background-color:#ededed; color:#454343; font-family:Arial; font-weight:bold; height:20px; width:650px; text-align:left; padding-left:5px; padding-top:5px;">
+                EDUCATION BACKGROUND
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+              <div style="color:#696868">University / Insititution</div>
+       </td>
+        <td>
+             <div >
+                @Html.DisplayFor(model => model.insititution)
+             </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+              <div style="color:#696868">Qualification</div>
+       </td>
+        <td>
+             <div >
+                @Html.DisplayFor(model => model.qualification)
+            </div>
+        </td>
+    </tr>
+     <tr>
+        <td>
+               <div style="color:#696868">GPA</div>
+        </td>
+        <td>
+             <div >
+                 @Html.DisplayFor(model => model.gpa)
+             </div>
+        </td>
+    </tr>
+  </table>
+    </div>
+    
+
+    
+    
+
+    
+   
+
+    
+    
+
+    
+    
+   
+   
+  
+
+    
+   
+
+  
+    
+    
+
+    
+   
+
+    
+    
+    
+    
+   
+
+    
+    
+
+    
+   
+
+   
+
+    
+    
+  
+  
+
+   
+    
+  
+
+    
+
+    
+   
+   
+  
+
+    
+
+    

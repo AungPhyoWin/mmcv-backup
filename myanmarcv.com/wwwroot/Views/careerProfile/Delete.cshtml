@@ -1,0 +1,53 @@
+﻿@model MyanmarCV.Models.careerProfile
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>careerProfile</legend>
+
+    <div class="display-label">email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">yearOfWorkingExp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.yearOfWorkingExp)
+    </div>
+
+    <div class="display-label">highestEducationLevelId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.highestEducationLevelId)
+    </div>
+
+    <div class="display-label">latestPosition</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latestPosition)
+    </div>
+
+    <div class="display-label">latestSalary</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latestSalary)
+    </div>
+
+    <div class="display-label">expectedSalary</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.expectedSalary)
+    </div>
+
+    <div class="display-label">availablityId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.availablityId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

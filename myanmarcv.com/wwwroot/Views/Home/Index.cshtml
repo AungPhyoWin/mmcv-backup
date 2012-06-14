@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="editor-label">
+        Text:
+    </div>
+    <div class="editor-field">
+        @Html.TextBox("Text")
+    </div>
+
+    @Html.Partial("_Captcha", new Uco.Models.Captcha())
+    @Html.Partial("_InvisibleCaptcha", new Uco.Models.InvisibleCaptcha())
+
+    <p>
+        <input type="submit" value="Send" />
+    </p>
+}

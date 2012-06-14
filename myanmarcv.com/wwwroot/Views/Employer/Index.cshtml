@@ -1,0 +1,129 @@
+﻿@model IEnumerable<MyanmarCV.Models.employerRegistration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            companyName
+        </th>
+        <th>
+            registrationNo
+        </th>
+        <th>
+            typeOfCompanyId
+        </th>
+        <th>
+            industrySectorId
+        </th>
+        <th>
+            zipCode
+        </th>
+        <th>
+            countryId
+        </th>
+        <th>
+            faxNumber
+        </th>
+        <th>
+            contactPerson
+        </th>
+        <th>
+            designation
+        </th>
+        <th>
+            contactNumber
+        </th>
+        <th>
+            email
+        </th>
+        <th>
+            createdDate
+        </th>
+        <th>
+            deletedDate
+        </th>
+        <th>
+            modifiedDate
+        </th>
+        <th>
+            logo
+        </th>
+        <th>
+            employerLoginName
+        </th>
+        <th>
+            password
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.companyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.registrationNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.typeOfCompanyId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.industrySectorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zipCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.countryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.faxNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactPerson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.createdDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deletedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.logo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employerLoginName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

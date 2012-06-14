@@ -1,0 +1,161 @@
+﻿@model MyanmarCV.Models.employerRegistration
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>employerRegistration</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.companyName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.companyName)
+            @Html.ValidationMessageFor(model => model.companyName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.registrationNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.registrationNo)
+            @Html.ValidationMessageFor(model => model.registrationNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.typeOfCompanyId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.typeOfCompanyId)
+            @Html.ValidationMessageFor(model => model.typeOfCompanyId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.industrySectorId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.industrySectorId)
+            @Html.ValidationMessageFor(model => model.industrySectorId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.zipCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.zipCode)
+            @Html.ValidationMessageFor(model => model.zipCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.countryId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.countryId)
+            @Html.ValidationMessageFor(model => model.countryId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.faxNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.faxNumber)
+            @Html.ValidationMessageFor(model => model.faxNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.contactPerson)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.contactPerson)
+            @Html.ValidationMessageFor(model => model.contactPerson)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.designation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.designation)
+            @Html.ValidationMessageFor(model => model.designation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.contactNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.contactNumber)
+            @Html.ValidationMessageFor(model => model.contactNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.createdDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.createdDate)
+            @Html.ValidationMessageFor(model => model.createdDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.deletedDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.deletedDate)
+            @Html.ValidationMessageFor(model => model.deletedDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.modifiedDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.modifiedDate)
+            @Html.ValidationMessageFor(model => model.modifiedDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.logo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.logo)
+            @Html.ValidationMessageFor(model => model.logo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.employerLoginName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.employerLoginName)
+            @Html.ValidationMessageFor(model => model.employerLoginName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.password)
+            @Html.ValidationMessageFor(model => model.password)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

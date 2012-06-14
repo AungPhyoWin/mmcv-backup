@@ -1,0 +1,123 @@
+<script type="text/javascript">
+<!--
+window.location = "http://www.myanmarcv.com/index.htm"
+//-->
+</script>
+@model MyanmarCV.Models.RegisterModel
+
+           
+@{
+    ViewBag.Title = "www.MyanmarCV.com - Resume Search, Buy online job posting, Recruiting manpower, corporate recruitment,Staffing and hiring online.";
+    ViewBag.Description = "Post your jobs online at www.MyanmarCV.com. Search over thousand of resumes on single click. Recruit and hire right and bright candidates instantly, Buy online recruitment services from www.MyanmarCV.com";
+    ViewBag.Keywords = "resume search,hiring employees,find employees,resume search engines,job posting, job recruiters,recruiting,advertising jobs,executive recruitment,recruitment,recruit staff,recruiting agencies,legal recruiting,online recruitment,employer,employment";
+    Layout = "~/Views/Shared/_Empty.cshtml";
+}
+
+
+		<script src="@Url.Content("~/Scripts/jquery.js")" type="text/javascript"></script>
+		<script src="@Url.Content("~/Scripts/jquery.slideshow.min.js")" type="text/javascript"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$('#slideshow').slideshow({
+				timeout: 5000,
+				fadetime: 1500,
+				type: 'random',
+				pauselink: 'pause1',
+				pausecallback: function(self){
+					self.html('Play')
+				},
+				playcallback: function(self){
+					self.html('Pause');
+				}
+			});
+			
+	        });
+	</script>
+
+@using (Html.BeginForm())
+{
+<div class="body_first">
+
+		<div class="body_con">
+
+        		<div class="body_left">
+
+                	<div><h3><font color="#811d1d">MyanmarCV.com</font> helps you to be the first to job market</h3></div>
+
+                   <div id="slideshow">
+			<img src="../../images/photo1.jpg" alt="" />
+			<img src="../../images/photo2.jpg" alt="" />
+		</div>
+
+                </div>
+
+               
+                <div class="body_right">
+
+                	<div style="padding-top:35px"><h3 style="padding:0; margin:0">Sign Up</h3></div>
+
+                    <div style="padding:10px 0px 10px 0px"><img src="../../images/hr.jpg" /></div>
+
+                    <table width="350px" border="0" cellspacing="0" cellpadding="0" class="signup_table">
+
+                  <tr>
+
+                    <td height="35px" align="right">Name:</td>
+
+                    <td>@Html.TextBoxFor(m => m.name, new { @class = "signup_textbox" })
+                       @* @Html.ValidationMessageFor(m => m.name)*@
+                       <div class="validation">@Html.ValidationMessageFor(m => m.name)</div>
+                    </td>
+                  </tr>
+
+                  <tr>
+
+                    <td height="35px" align="right">Your Email:</td>
+
+                    <td>@Html.TextBoxFor(m => m.email, new { @class = "signup_textbox" })
+                       @* @Html.ValidationMessageFor(m => m.email)*@
+                       <div class="validation"> @Html.ValidationMessageFor(m => m.email)</div></td>
+                  </tr>
+
+                 
+                  <tr>
+
+                    <td height="35px" align="right">Password:</td>
+
+                    <td> @Html.PasswordFor(m => m.Password, new { @class = "signup_textbox" })
+                        @* @Html.ValidationMessageFor(m => m.Password)*@
+                        <div class="validation">@Html.ValidationMessageFor(m => m.Password)</div> </td>
+                  </tr>
+
+                   <tr>
+
+                    <td height="35px" align="right">Re-Password:</td>
+
+                    <td> @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "signup_textbox" })
+                         @*@Html.ValidationMessageFor(m => m.ConfirmPassword)*@
+                         <div class="validation">@Html.ValidationMessageFor(m => m.ConfirmPassword)</div> </td>
+                  </tr>
+
+ 			 <tr>
+
+                    <td></td>
+
+                    <td height="35px"><input type="submit" value="" class="signup" /></td>
+
+                  </tr>
+            <tr>
+                <td colspan="2"  class="validation" style="text-align:center">
+                 
+                </td>
+            </tr>
+
+
+                </table>
+
+                </div> 
+             </div>
+
+		</div>
+
+<div class="copyright">Copyright © 2012 MyanmarCV Pte Ltd. All rights reserved</div>
+}

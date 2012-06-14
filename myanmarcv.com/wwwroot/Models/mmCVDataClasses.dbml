@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mmcv" Class="mmCVDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=sql2003.shared-servers.com,1087;Initial Catalog=mmcv;User ID=aung" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mmcvConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.userInfo" Member="userInfos">
+    <Type Name="userInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="desiredUserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.subscribedEmail" Member="subscribedEmails">
+    <Type Name="subscribedEmail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mobileNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="issubscribed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.careerProfile" Member="careerProfiles">
+    <Type Name="careerProfile">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="yearOfWorkingExp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="highestEducationLevelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="latestPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="latestSalary" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="expectedSalary" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="availablityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="createDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.education" Member="educations">
+    <Type Name="education">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="institution" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="qualification" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fieldOfStudy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gpa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="educationPeriodStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="educationPeriodEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.workExperience" Member="workExperiences">
+    <Type Name="workExperience">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="companyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="monthlySalary" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jobResponsibility" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="employmentStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employmentEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.otherSkill" Member="otherSkills">
+    <Type Name="otherSkill">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="other" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="language" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="certificate" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employerRegistration" Member="employerRegistrations">
+    <Type Name="employerRegistration">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employerid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="companyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="registrationNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="typeOfCompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="industrySectorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="zipCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="countryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="faxNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contactPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="designation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contactNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="logo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="employerLoginName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jobAdvertisment" Member="jobAdvertisments">
+    <Type Name="jobAdvertisment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employerid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="yearOfExperienceRequired" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="jobAdvertismentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jobPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jobDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="closeDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="contactEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="noOfemployeeRequired" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="viewCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jobTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.countryDef" Member="countryDefs">
+    <Type Name="countryDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="countryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="countryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nationalityDef" Member="nationalityDefs">
+    <Type Name="nationalityDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nationalityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.maritalDef" Member="maritalDefs">
+    <Type Name="maritalDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="maritalStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maritalStatusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.raceDef" Member="raceDefs">
+    <Type Name="raceDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="raceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="raceName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.religionDef" Member="religionDefs">
+    <Type Name="religionDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="religionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="religionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contactUs" Member="contactUs">
+    <Type Name="contactUs">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="requestId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.genderDef" Member="genderDefs">
+    <Type Name="genderDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="genderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="genderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.availablityDef" Member="availablityDefs">
+    <Type Name="availablityDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="availablityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="availablityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.highestEducationLevelDef" Member="highestEducationLevelDefs">
+    <Type Name="highestEducationLevelDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="highestEducationLevelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="highestEducationLevel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.typeOfCompanyDef" Member="typeOfCompanyDefs">
+    <Type Name="typeOfCompanyDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="typeOfCompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="typeOfCompanyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.industrySector" Member="industrySectors">
+    <Type Name="industrySector">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="industrySectorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="industrySectorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jobTypeDef" Member="jobTypeDefs">
+    <Type Name="jobTypeDef">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="jobTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jobTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.personalDetail" Member="personalDetails">
+    <Type Name="personalDetail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nationalityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="passportNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nricNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mobileNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="homePhoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contactableNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="genderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dateOfBirth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="countryOfResidenceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="religionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="martialStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="race" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="isBlacklist" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="isPersonalCompleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="countryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

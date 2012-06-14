@@ -1,0 +1,63 @@
+﻿@model MyanmarCV.Models.SubscribedModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>subscribed</title>
+</head>
+<body>
+    <div>
+
+
+     @Html.ValidationSummary(true,"Please correct the errors and try again.")
+        @using (Html.BeginForm()) {
+   
+    <fieldset>
+        <legend>Subscribe</legend>
+
+        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+       
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.name)
+            @Html.ValidationMessageFor(model => model.name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.phoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.phoneNumber)
+            @Html.ValidationMessageFor(model => model.phoneNumber)
+        </div>
+
+      
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+    </div>
+</body>
+</html>

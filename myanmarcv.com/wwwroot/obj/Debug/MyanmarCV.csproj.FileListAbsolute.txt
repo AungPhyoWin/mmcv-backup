@@ -1,0 +1,15 @@
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\bin\MyanmarCV.dll
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\bin\MyanmarCV.pdb
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\bin\EntityFramework.dll
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\bin\EntityFramework.xml
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\obj\Debug\ResolveAssemblyReference.cache
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\obj\Debug\MyanmarCV.dll
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\obj\Debug\MyanmarCV.pdb
+F:\testingProject\MMCV\MyanmarCV\MyanmarCV\bin\EO.Pdf.dll
+F:\MMCV backup\myanmarcv.com\wwwroot\bin\MyanmarCV.dll
+F:\MMCV backup\myanmarcv.com\wwwroot\bin\MyanmarCV.pdb
+F:\MMCV backup\myanmarcv.com\wwwroot\bin\EO.Pdf.dll
+F:\MMCV backup\myanmarcv.com\wwwroot\bin\EntityFramework.xml
+F:\MMCV backup\myanmarcv.com\wwwroot\obj\Debug\ResolveAssemblyReference.cache
+F:\MMCV backup\myanmarcv.com\wwwroot\obj\Debug\MyanmarCV.dll
+F:\MMCV backup\myanmarcv.com\wwwroot\obj\Debug\MyanmarCV.pdb

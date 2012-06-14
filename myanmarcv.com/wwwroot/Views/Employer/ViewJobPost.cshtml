@@ -1,0 +1,150 @@
+@model MyanmarCV.Models.jobAdvertisment
+
+@{
+    ViewBag.Title = "ViewJobPost";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<body id="emplogin_link">
+     <div style="width:900px; margin:0 auto;display:table;">
+                        		<div style="width:850px; margin:0px 15px 7px 8px;  margin:0 auto;">
+                                    <br />
+                                    		<table border="0" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td style="background:url('../../images/main_left.jpg') no-repeat; height:35px; width:11px;"></td>
+                                                    <td style="font-family: Calist;font-size:20px;background:url('../../images/main_body.jpg') repeat-x;height:35px;width:850px; text-align:center; ">View Job Post</td>
+                                                    <td style="background:url('../../images/main_right.jpg') no-repeat; height:35px;width:11px;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                  	<td colspan="3" style="border-left:1px solid #dad8d9; border-right:1px solid #dad8d9;line-height:30px">
+                                                 	    <br />
+                                                            <table width="500px" cellspacing="5px" align="left">
+                                                             
+                                                                   
+                                                                       <tr>
+            <td width="300px" style="padding-right:20px" align="left">
+            		 @Html.HiddenFor(model => model.id)
+
+       EmployerID
+       </td>   
+            <td align="left" >
+               
+		 <div class="editor-field">
+           @{
+                string employerid = Model.employerid.ToString();
+                employerid = employerid.Substring(0, 8);
+               
+             }
+            @employerid.ToUpper();
+
+            
+        </div>
+
+            </td>
+          </tr>
+          <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+                    Year Of Experience Required
+            </td>
+            <td align="left" >
+	        <div class="editor-field">
+            @Html.DisplayFor(model => model.yearOfExperienceRequired)
+        </div>
+
+            </td>
+          </tr>
+          <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+                 Job Position
+
+            </td>
+            <td align="left" >
+@Html.HiddenFor(model => model.jobAdvertismentId)
+
+                     <div class="display-field">
+        @Html.DisplayFor(model => model.jobPosition)
+    </div>
+            </td>
+          </tr>
+          <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+                 Job Description
+            </td>
+            <td align="left" >
+                  <div class="display-field">
+        @Html.DisplayFor(model => model.jobDescription)
+    </div>            </td>
+          </tr>
+          <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+                  Close Date
+            </td>
+            <td align="left" >
+                 <div class="display-field">
+        @Html.DisplayFor(model => model.closeDate)
+    </div>
+
+            </td>
+          </tr>
+          <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+                 Contact Email
+            </td>
+            <td align="left" >
+                  <div class="display-field">
+        @Html.DisplayFor(model => model.contactEmail)
+    </div>
+
+
+            </td>
+          </tr>
+       
+
+ <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+             No Of Employee Required
+            </td>
+            <td align="left" >
+                  <div class="display-field">
+        @Html.DisplayFor(model => model.noOfemployeeRequired)
+    </div>
+
+
+            </td>
+          </tr>
+	 <tr>
+             <td width="300px" style="padding-right:20px" align="left">
+             view Count
+            </td>
+            <td align="left" >
+                  <div class="display-field">
+        @Html.DisplayFor(model => model.viewCount)
+    </div>
+
+
+            </td>
+          </tr>
+
+         
+        
+    </table>
+                                                    </td>
+                                                 </tr>
+                                                 <tr>
+                                                 	<td style="background-image:url('../../images/main_bot_left.jpg'); height:9px; background-repeat:no-repeat;"></td>
+                                                    <td style="border-bottom:1px solid #dad8d9;"></td>
+                                                    <td style="background-image:url('../../images/main_bot_right.jpg');height:9px; background-repeat:no-repeat;"></td>
+                                                 </tr>
+                                                </table>
+                                 
+                                </div>
+      </div>     
+  </body>  
+    <br>
+
+<p>
+    @Html.ActionLink("Edit", "EditJobPost", new { jobAdvertId =  Model.jobAdvertismentId }) |
+    @Html.ActionLink("Back to List", "ViewJobPostList", new { employerId = Model.employerid}) |
+    @Html.ActionLink("Download", "pdfViewJobPost", new { jobAdvertId = Model.jobAdvertismentId})
+</p>
+<br>

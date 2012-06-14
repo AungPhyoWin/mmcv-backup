@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MyanmarCV.Models.careerProfile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            email
+        </th>
+        <th>
+            yearOfWorkingExp
+        </th>
+        <th>
+            highestEducationLevelId
+        </th>
+        <th>
+            latestPosition
+        </th>
+        <th>
+            latestSalary
+        </th>
+        <th>
+            expectedSalary
+        </th>
+        <th>
+            availablityId
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yearOfWorkingExp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.highestEducationLevelId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latestPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latestSalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expectedSalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.availablityId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,136 @@
+@model IEnumerable<MyanmarCV.Models.jobAdvertisment>
+
+@{
+    ViewBag.Title = "ViewJobPostList";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+
+<div style="text-align:right; padding-right:20px">
+@{
+    string employerid = Request.QueryString["employerid"];
+    
+    
+ }
+    @Html.ActionLink("Create New", "JobPost", new { employerId = employerid })
+     
+</div>
+
+<body id="emplogin_link">
+ <div style="width:880px; margin:0 auto;display:table;">
+                        		<div style="width:880px; margin:0px 15px 7px 8px;  margin:0 auto;">
+                                    <br />
+                                    		<table border="0" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td style="background:url('../../images/main_left.jpg') no-repeat; height:35px; width:11px;"></td>
+                                                    <td style="font-family: Calist;font-size:20px;background:url('../../images/main_body.jpg') repeat-x;height:35px;width:880px; text-align:center; ">View Job Post List</td>
+                                                    <td style="background:url('../../images/main_right.jpg') no-repeat; height:35px;width:11px;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                  	<td colspan="3" style="border-left:1px solid #dad8d9; border-right:1px solid #dad8d9;">
+                                                 		<br>
+                                                            <table width="880px" cellspacing="2px" style="line-height:20px">
+                                                                   <tr style="background-color:#e4e7e9; height:30px">
+        <th>
+            Advertisment ID
+        </th>
+       
+        <th>
+            jobPosition
+        </th>
+       
+        <th>
+            closeDate
+        </th>
+        <th>
+            contactEmail
+        </th>
+        <th>
+            createdDate
+        </th>
+        
+        <th>
+            modifiedDate
+        </th>
+        <th>
+           emp required
+        </th>
+        <th>
+            viewCount
+        </th>
+        
+        <th></th>
+    </tr>
+
+	 
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+             @{
+    //string employerid = modelItem.employerid.ToString();
+    string jobAdvertismentId = item.jobAdvertismentId.ToString();
+    // jobAdvertismentId = jobAdvertismentId.Substring(24, 12);
+               
+             }
+            @jobAdvertismentId.ToUpper();
+            @Html.HiddenFor(modelItem => item.jobAdvertismentId)
+            
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.jobPosition)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.closeDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactEmail)
+        </td>
+        <td>
+           @{
+                string createdDate =String.Format("{0:ddd, MMM d, yyyy}", item.createdDate);
+                
+             }
+            @createdDate.ToString();
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.modifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.noOfemployeeRequired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.viewCount)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit","EditJobPost", new { jobAdvertId = item.jobAdvertismentId }) |
+            @Html.ActionLink("Details", "ViewJobPost", new { jobAdvertId = item.jobAdvertismentId }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+
+
+                                                                    
+    </table>
+                                                    </td>
+                                                 </tr>
+                                                 <tr>
+                                                 	<td style="background-image:url('../../images/main_bot_left.jpg'); height:9px; background-repeat:no-repeat;"></td>
+                                                    <td style="border-bottom:1px solid #dad8d9;"></td>
+                                                    <td style="background-image:url('../../images/main_bot_right.jpg');height:9px; background-repeat:no-repeat;"></td>
+                                                 </tr>
+                                                </table>
+                                 
+                                </div>
+      </div> 
+   </body> 
+
+
+

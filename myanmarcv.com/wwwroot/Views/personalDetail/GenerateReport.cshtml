@@ -1,0 +1,13 @@
+﻿@model MyanmarCV.Models.personalDetail
+@{
+    ViewBag.Title = "GenerateReport";
+}
+
+<h2>GenerateReport</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<p>
+      <input type="submit" value="Generate" />
+</p>
+}

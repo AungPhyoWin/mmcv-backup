@@ -1,0 +1,96 @@
+﻿@model MyanmarCV.Models.personalDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>personalDetail</legend>
+
+    <div class="display-label">email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">nationalityId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nationalityId)
+    </div>
+
+    <div class="display-label">passportNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.passportNo)
+    </div>
+
+    <div class="display-label">nricNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nricNo)
+    </div>
+
+    <div class="display-label">mobileNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mobileNo)
+    </div>
+
+    <div class="display-label">homePhoneNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.homePhoneNo)
+    </div>
+
+    <div class="display-label">contactableNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactableNo)
+    </div>
+
+    <div class="display-label">genderId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.genderId)
+    </div>
+
+    <div class="display-label">createdDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createdDate)
+    </div>
+
+    <div class="display-label">deletedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deletedDate)
+    </div>
+
+    <div class="display-label">modifiedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.modifiedDate)
+    </div>
+
+    <div class="display-label">dateOfBirth</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateOfBirth)
+    </div>
+
+    <div class="display-label">countryOfResidenceId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.countryOfResidenceId)
+    </div>
+
+    <div class="display-label">religionId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.religionId)
+    </div>
+
+    <div class="display-label">martialStatusId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.martialStatusId)
+    </div>
+
+    <div class="display-label">race</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.race)
+    </div>
+</fieldset>
+<p>
+   @* @Html.ActionLink("Edit", "Edit", new { id=Model.email }) | *@
+    @Html.ActionLink("Edit","Edit",new  {id=Model.id})
+    @Html.ActionLink("Back to List", "Index")
+</p>

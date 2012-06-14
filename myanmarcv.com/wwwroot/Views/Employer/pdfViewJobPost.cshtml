@@ -1,0 +1,76 @@
+﻿@model MyanmarCV.Models.jobAdvertisment
+
+@{
+    ViewBag.Title = "pdfViewJobPost";
+    Layout = "~/Views/Shared/_pdfLayout.cshtml";
+}
+
+<h2>pdfViewJobPost</h2>
+
+<fieldset>
+    <legend>jobAdvertisment</legend>
+
+    <div class="display-label">employerid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.employerid)
+    </div>
+
+    <div class="display-label">yearOfExperienceRequired</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.yearOfExperienceRequired)
+    </div>
+
+    <div class="display-label">jobPosition</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jobPosition)
+    </div>
+
+    <div class="display-label">jobDescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jobDescription)
+    </div>
+
+    <div class="display-label">closeDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.closeDate)
+    </div>
+
+    <div class="display-label">contactEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactEmail)
+    </div>
+
+    <div class="display-label">createdDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createdDate)
+    </div>
+
+    <div class="display-label">deletedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deletedDate)
+    </div>
+
+    <div class="display-label">modifiedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.modifiedDate)
+    </div>
+
+    <div class="display-label">noOfemployeeRequired</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.noOfemployeeRequired)
+    </div>
+
+    <div class="display-label">viewCount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.viewCount)
+    </div>
+
+    <div class="display-label">jobTypeId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.jobTypeId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

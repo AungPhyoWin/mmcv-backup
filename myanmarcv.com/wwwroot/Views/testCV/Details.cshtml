@@ -1,0 +1,50 @@
+﻿@model MyanmarCV.Models.userInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>userInfo</legend>
+
+    <div class="display-label">firstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.firstName)
+    </div>
+
+    <div class="display-label">lastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lastName)
+    </div>
+
+    <div class="display-label">desiredUserName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.desiredUserName)
+    </div>
+
+    <div class="display-label">password</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+
+    <div class="display-label">createdDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createdDate)
+    </div>
+
+    <div class="display-label">modifiedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.modifiedDate)
+    </div>
+
+    <div class="display-label">deletedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deletedDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,50 @@
+@model MyanmarCV.Models.FooEditModel
+
+@{
+    ViewBag.Title = "Calendar";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{ 
+
+  <div style="width:900px; margin:0 auto;display:table;">
+                        		<div style="width:850px; margin:0px 15px 7px 8px;  margin:0 auto;">
+                                    <br />
+                                    		<table border="0" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td style="background:url('../../images/main_left.jpg') no-repeat; height:35px; width:11px;"></td>
+                                                    <td style="font-family: Calist;font-size:20px;background:url('../../images/main_body.jpg') repeat-x;height:35px;width:850px; text-align:center; ">Calendar</td>
+                                                    <td style="background:url('../../images/main_right.jpg') no-repeat; height:35px;width:11px;"></td>
+                                                  </tr>
+                                                  <tr>
+                                                  	<td colspan="3" style="border-left:1px solid #dad8d9; border-right:1px solid #dad8d9;">
+                                                            <table width="600px" align="center" height="180px" cellspacing="5px">
+                                                                    <tr>
+                                                                        <td >
+                                                                          @Html.EditorFor(m => m.Foo)
+                                                                        
+                                                                        </td>
+                                                                                                                                           </tr>
+  <tr>
+                                                                                                                                               <td> <input id="submit" name="submit" type="submit" value="Save" /></td>
+                                                                    </tr>
+                                                               
+        
+    </table>
+                                                    </td>
+                                                 </tr>
+                                                 <tr>
+                                                 	<td style="background-image:url('../../images/main_bot_left.jpg'); height:9px; background-repeat:no-repeat;"></td>
+                                                    <td style="border-bottom:1px solid #dad8d9;"></td>
+                                                    <td style="background-image:url('../../images/main_bot_right.jpg');height:9px; background-repeat:no-repeat;"></td>
+                                                 </tr>
+                                                </table>
+                                 
+                                </div>
+      </div> 
+
+   
+   
+}

@@ -1,0 +1,19 @@
+@{
+    ViewBag.Title = "photoUpload";
+    Layout = null;
+}
+<script type="text/javascript">
+    window.onunload = function () {
+        if (window.opener && !window.opener.closed) {
+            window.opener.popUpClosed();
+        }
+    };
+</script>
+<div style=" font-family:Geneva, sans-serif;
+font-size:15px; background-color:#cdd0d5;line-height:30px">
+&nbsp;Upload your photo</div><br>
+@using (Html.BeginForm("photoUpload", "personalDetail", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    <input type="file" name="file" id="file" />
+    <input type="submit" value="OK" />
+}

@@ -1,0 +1,100 @@
+﻿@model MyanmarCV.Models.employerRegistration
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>employerRegistration</legend>
+
+    <div class="display-label">companyName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.companyName)
+    </div>
+
+    <div class="display-label">registrationNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.registrationNo)
+    </div>
+
+    <div class="display-label">typeOfCompanyId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.typeOfCompanyId)
+    </div>
+
+    <div class="display-label">industrySectorId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.industrySectorId)
+    </div>
+
+    <div class="display-label">zipCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.zipCode)
+    </div>
+
+    <div class="display-label">countryId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.countryId)
+    </div>
+
+    <div class="display-label">faxNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.faxNumber)
+    </div>
+
+    <div class="display-label">contactPerson</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactPerson)
+    </div>
+
+    <div class="display-label">designation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.designation)
+    </div>
+
+    <div class="display-label">contactNumber</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactNumber)
+    </div>
+
+    <div class="display-label">email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">createdDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createdDate)
+    </div>
+
+    <div class="display-label">deletedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deletedDate)
+    </div>
+
+    <div class="display-label">modifiedDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.modifiedDate)
+    </div>
+
+    <div class="display-label">logo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.logo)
+    </div>
+
+    <div class="display-label">employerLoginName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.employerLoginName)
+    </div>
+
+    <div class="display-label">password</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
